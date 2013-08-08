@@ -1,7 +1,6 @@
-"
+
 " delong vim config, used for python
 " based on vundle https://github.com/gmarik/vundle
-"
 
 " **********************************
 " common start
@@ -74,7 +73,7 @@ function! NumberToggle()
     set relativenumber
   endif
 endfunc
-nnoremap <C-n> :call NumberToggle()<cr>
+map <C-n> :call NumberToggle()<CR>
 
 " ************************************
 " about search
@@ -114,8 +113,8 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 
 " treat long lines as break lines
-map j gj
-map k gk
+" map j gj
+" map k gk
 
 nnoremap ; :
 nnoremap <F2> :set nonumber! number?<CR>
@@ -139,7 +138,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'majutsushi/tagbar'
-" Bundle 'Lokaltog/vim-powerline'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-easymotion'
@@ -150,14 +148,16 @@ Bundle 'vim-scripts/SelectBuf'
 Bundle 'hdima/python-syntax'
 Bundle 'scrooloose/syntastic'
 Bundle 'kevinw/pyflakes-vim'
-Bundle "pangloss/vim-javascript"
+Bundle 'pangloss/vim-javascript'
 Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'thiderman/nginx-vim-syntax'
-Bundle 'vim-scripts/_jsbeautify'
+Bundle 'delongw/nginx.vim'
 Bundle 'nono/jquery.vim'
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-surround'
+Bundle 'mbbill/undotree'
+Bundle 'tpope/vim-fugitive'
+Bundle 'godlygeek/tabular'
 
 " ************************************
 " plugin
@@ -165,16 +165,12 @@ Bundle 'altercation/vim-colors-solarized'
 
 " NERDTree
 map <F5> :NERDTreeToggle<CR>
-map <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$' ]
 
-" tagbar
-map <F9> :TagbarToggle<CR>
+" majutsushi/tagbar
+map <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
-
-" powerline
-let g:Powerline_symbols = 'unicode'
 
 " indentline
 let g:indentLine_noConcealCursor = 1
@@ -189,8 +185,8 @@ let g:syntastic_error_symbol='>>'
 let g:syntastic_warning_symbol='>'
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_highlighting = 0
-"let g:syntastic_python_checker="flake8,pyflakes,pep8,pylint"
-let g:syntastic_python_checkers=['pyflakes']
+" let g:syntastic_python_checker="flake8,pyflakes,pep8,pylint"
+let g:syntastic_python_checkers=['pep8']
 highlight SyntasticErrorSign guifg=white guibg=black
 
 " pyflakes-vim
@@ -202,15 +198,18 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 " vim-multiple-cursors
-let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
+let g:multi_cursor_start_key='<F6>'
+highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
+highlight link multiple_cursors_visual Visual
 
 " ctrlp
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux"
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux"
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
 let g:ctrlp_working_path_mode=0
 let g:ctrlp_match_window_bottom=1
@@ -219,11 +218,19 @@ let g:ctrlp_match_window_reversed=0
 let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
 
-" selectbuf
-map <leader>s <Plug>SelectBuf
+" vim-scripts/selectbuf
+map <F3> <Plug>SelectBuf
 
 " bronson/vim-trailing-whitespace
 map <leader>w :FixWhitespace<CR>
+
+" delongw/nginx
+au BufRead,BufNewFile /etc/nginx/* set ft=nginx
+au BufRead,BufNewFile /usr/local/nginx/conf/* set ft=nginx
+au BufRead,BufNewFile */nginx/*.conf set ft=nginx
+
+" mbbill/undotree
+nnoremap <leader>u :UndotreeToggle<CR>
 
 filetype plugin indent on
 
@@ -232,7 +239,6 @@ filetype plugin indent on
 " ************************************
 
 colorscheme molokai
-set background=dark
 set t_Co=256
 
 " Set extra options when running in GUI mode
