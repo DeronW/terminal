@@ -1,4 +1,3 @@
-
 " delong vim config, used for python
 " based on vundle https://github.com/gmarik/vundle
 
@@ -60,21 +59,6 @@ set nowrap " abort auto newline
 set showmatch " show match bracket
 set mat=2 " blink matching brackets, when 'mat' of tenth were match
 
-" **** use relative line number, I am not comfortable with it yet
-" set relativenumber
-" au FocusLost * :set number
-" au FocusGained * :set relativenumber
-" autocmd InsertEnter * :set number
-" autocmd InsertLeave * :set relativenumber
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-map <C-n> :call NumberToggle()<CR>
-
 " ************************************
 " about search
 " ************************************
@@ -117,7 +101,6 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 " map k gk
 
 nnoremap ; :
-nnoremap <F2> :set nonumber! number?<CR>
 nnoremap <F4> :set wrap! wrap?<CR>
 noremap <C-j> :m+<CR>
 noremap <C-k> :m-2<CR>
@@ -158,6 +141,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'mbbill/undotree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
+Bundle 'mileszs/ack.vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'myusuf3/numbers.vim'
 
 " ************************************
 " plugin
@@ -231,6 +217,11 @@ au BufRead,BufNewFile */nginx/*.conf set ft=nginx
 
 " mbbill/undotree
 nnoremap <leader>u :UndotreeToggle<CR>
+
+" myusuf3/numbers.vim
+call NumbersDisable()
+nnoremap <leader>n :NumbersToggle<CR>
+nnoremap <F2> :NumbersOnOff<CR>
 
 filetype plugin indent on
 
