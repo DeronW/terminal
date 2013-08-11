@@ -11,10 +11,12 @@ filetype indent on " use different indent format in different file
 filetype plugin on " enable plugin for different filetype
 set history=2000 " record history row
 set ruler " show current row and column number
+set t_Co=256 " show vim in 256 color mode, this means vim will be colorful
 set autoread " auto reload file content
 set nobackup " no backup file
 set noswapfile " no *.swp file
-" set cursorcolumn " high light current column
+set cursorcolumn " high light current column
+set number " show numberline
 set cursorline " high light current line
 set selectmode=mouse,key
 set title " use file name as terminal title
@@ -47,14 +49,9 @@ set nowrapscan " dont search wrap file
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")} " show file message in status line
 set paste " set paste, for paste text from flipboard
 
-" autocmd! bufwritepost .vimrc source % " auto reload vimrc config
-" autocmd InsertLeave * set nocursorline
-" autocmd InsertEnter * set cursorline
-
 " ***********************************
 " interface
 " ***********************************
-set number " show line number
 set nowrap " abort auto newline
 set showmatch " show match bracket
 set mat=2 " blink matching brackets, when 'mat' of tenth were match
@@ -122,18 +119,16 @@ Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/SelectBuf'
 Bundle 'hdima/python-syntax'
 Bundle 'scrooloose/syntastic'
-Bundle 'kevinw/pyflakes-vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'delongw/nginx.vim'
-Bundle 'nono/jquery.vim'
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-surround'
 Bundle 'mbbill/undotree'
-Bundle 'tpope/vim-fugitive'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'myusuf3/numbers.vim'
 
@@ -171,6 +166,7 @@ highlight SyntasticErrorSign guifg=white guibg=black
 let g:pyflakes_use_quickfix = 0
 
 " vim-javascript
+let javascript_enable_domhtmlcss=1
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
@@ -211,7 +207,7 @@ au BufRead,BufNewFile */nginx/*.conf set ft=nginx
 nnoremap <leader>u :UndotreeToggle<CR>
 
 " myusuf3/numbers.vim
-call NumbersDisable()
+let g:enable_numbers=0
 nnoremap <leader>n :NumbersToggle<CR>
 nnoremap <F2> :NumbersOnOff<CR>
 
@@ -222,21 +218,6 @@ filetype plugin indent on
 " ************************************
 
 colorscheme molokai
-set t_Co=256
-
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guifont=Monaco:h14
-    set guioptions-=T
-    set guioptions+=e
-    set guioptions-=r
-    set guioptions-=L
-    set guitablabel=%M\ %t
-    set showtabline=1
-    set linespace=2
-    set noimd
-    set t_Co=256
-endif
 
 hi! link SignColumn   LineNr
 hi! link ShowMarksHLl DiffAdd
@@ -249,3 +230,4 @@ highlight clear SpellRare
 highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
+
