@@ -48,7 +48,10 @@ set backspace=eol,start,indent " Influences the working of <BS>, <Del>, CTRL-W a
 set nowrapscan " dont search wrap file
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")} " show file message in status line
 set paste " set paste, for paste text from flipboard
-
+if $SHELL=~'bin/fish' " user system default shell, fix bug, we can use vim in different shell
+    set shell=/bin/sh
+endif
+ 
 " ***********************************
 " interface
 " ***********************************
