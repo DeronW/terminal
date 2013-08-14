@@ -1,5 +1,5 @@
-" delong vim config, used for python
 " based on vundle https://github.com/gmarik/vundle
+" delong vim config, used for python
 
 " **********************************
 " common start
@@ -51,7 +51,6 @@ set paste " set paste, for paste text from flipboard
 if $SHELL=~'bin/fish' " user system default shell, fix bug, we can use vim in different shell
     set shell=/bin/sh
 endif
- 
 " ***********************************
 " interface
 " ***********************************
@@ -156,34 +155,18 @@ let g:indentLine_char = '¦'
 " python-syntax
 let python_highlight_all = 1
 
-" syntastic
-let g:syntastic_error_symbol='>>'
-let g:syntastic_warning_symbol='>'
+" scrooloose/syntastic
+let g:syntastic_error_symbol='->'
+let g:syntastic_warning_symbol='->'
 let g:syntastic_check_on_open=1
-let g:syntastic_enable_highlighting = 0
-" let g:syntastic_python_checker="flake8,pyflakes,pep8,pylint"
-let g:syntastic_python_checkers=['pep8']
-highlight SyntasticErrorSign guifg=white guibg=black
 
-" pyflakes-vim
-let g:pyflakes_use_quickfix = 0
-
-" vim-javascript
+" pangloss/vim-javascript
 let javascript_enable_domhtmlcss=1
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
-" vim-multiple-cursors
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
-let g:multi_cursor_start_key='<F6>'
-highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
-highlight link multiple_cursors_visual Visual
-
-" ctrlp
+" kien/ctrlp
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux"
