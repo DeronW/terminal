@@ -98,9 +98,6 @@ noremap <C-k> :m-2<CR>
 inoremap <C-j> <Esc>:m+<CR>
 inoremap <C-k> <Esc>:m-2<CR>
 
-au InsertLeave * set nopaste " disable paste mode when leaving insert mode
-au InsertEnter * set paste " disable paste mode when leaving insert mode
-
 " ************************************
 " vim vundle
 " ************************************
@@ -119,7 +116,6 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/SelectBuf'
-Bundle 'hdima/python-syntax'
 Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
 Bundle 'bronson/vim-trailing-whitespace'
@@ -131,7 +127,6 @@ Bundle 'mbbill/undotree'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
 Bundle 'myusuf3/numbers.vim'
 
 " ************************************
@@ -151,9 +146,6 @@ let g:tagbar_autofocus = 1
 let g:indentLine_noConcealCursor = 1
 let g:indentLine_color_term = 0
 let g:indentLine_char = '¦'
-
-" python-syntax
-let python_highlight_all = 1
 
 " scrooloose/syntastic
 let g:syntastic_error_symbol='->'
@@ -184,11 +176,6 @@ map <F3> <Plug>SelectBuf
 " bronson/vim-trailing-whitespace
 map <leader>w :FixWhitespace<CR>
 
-" delongw/nginx
-au BufRead,BufNewFile /etc/nginx/* set ft=nginx
-au BufRead,BufNewFile /usr/local/nginx/conf/* set ft=nginx
-au BufRead,BufNewFile */nginx/*.conf set ft=nginx
-
 " mbbill/undotree
 nnoremap <leader>u :UndotreeToggle<CR>
 
@@ -216,4 +203,3 @@ highlight clear SpellRare
 highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
-
