@@ -46,7 +46,7 @@ set magic " Changes the special characters that can be used in search patterns
 set whichwrap+=<,>,h,l " Allow specified keys that move the cursor line
 set backspace=eol,start,indent " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set nowrapscan " dont search wrap file
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")} " show file message in status line
 set paste " set paste, for paste text from flipboard
 if $SHELL=~'bin/fish' " user system default shell, fix bug, we can use vim in different shell
     set shell=/bin/sh
@@ -78,6 +78,7 @@ set foldlevel=99 " max fold level
 " ************************************
 set smartindent " indent format
 set autoindent " auto indent in new line
+set cindent " use c like style indent
 
 " ************************************
 " extra function
@@ -86,10 +87,6 @@ set autoindent " auto indent in new line
 " self hotkey
 let mapleader = "'"
 let g:mapleader = "'"
-
-" treat long lines as break lines
-" map j gj
-" map k gk
 
 nnoremap ; :
 nnoremap <F4> :set wrap! wrap?<CR>
@@ -109,7 +106,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'majutsushi/tagbar'
-Bundle 'Yggdroot/indentLine'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdcommenter'
@@ -117,17 +113,17 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/SelectBuf'
 Bundle 'scrooloose/syntastic'
-Bundle 'pangloss/vim-javascript'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'delongw/nginx.vim'
 Bundle 'tomasr/molokai'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-surround'
 Bundle 'mbbill/undotree'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Kris2k/mark.vim'
 
 " ************************************
 " plugin
@@ -142,21 +138,10 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so
 map <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
-" indentline
-let g:indentLine_noConcealCursor = 1
-let g:indentLine_color_term = 0
-let g:indentLine_char = '¦'
-
 " scrooloose/syntastic
 let g:syntastic_error_symbol='->'
 let g:syntastic_warning_symbol='->'
 let g:syntastic_check_on_open=1
-
-" pangloss/vim-javascript
-let javascript_enable_domhtmlcss=1
-let g:html_indent_inctags = "html,body,head,tbody"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
 
 " kien/ctrlp
 let g:ctrlp_map = '<leader>p'
@@ -177,29 +162,31 @@ map <F3> <Plug>SelectBuf
 map <leader>w :FixWhitespace<CR>
 
 " mbbill/undotree
+if has("persistent_undo")
+    set undodir='/tmp/vim-undo/'
+    set undofile
+endif
 nnoremap <leader>u :UndotreeToggle<CR>
 
 " myusuf3/numbers.vim
 let g:enable_numbers=0
-nnoremap <leader>n :NumbersToggle<CR>
 nnoremap <F2> :NumbersOnOff<CR>
 
-filetype plugin indent on
+" nathanaelkane/vim-indent-guides
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=16
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=16
 
-" ************************************
-" theme
-" ************************************
-
+" tomasr/molokai
+" this is the config of theme
 colorscheme molokai
+let g:molokai_original = 1
+highlight CursorLine   cterm=none ctermbg=236
+highlight Cursor       ctermfg=16  ctermbg=253
 
-hi! link SignColumn   LineNr
-hi! link ShowMarksHLl DiffAdd
-hi! link ShowMarksHLu DiffChange
-highlight clear SpellBad
-highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
-highlight clear SpellCap
-highlight SpellCap term=underline cterm=underline
-highlight clear SpellRare
-highlight SpellRare term=underline cterm=underline
-highlight clear SpellLocal
-highlight SpellLocal term=underline cterm=underline
+" extra config, locate theme on bottom
+filetype plugin indent on
