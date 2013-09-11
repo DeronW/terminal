@@ -1,5 +1,4 @@
 " based on vundle https://github.com/gmarik/vundle
-" delong vim config, used for python
 
 " **********************************
 " common start
@@ -35,8 +34,6 @@ set wildmode=list:longest " Completion mode that is used for the character speci
 set ttyfast " Indicates a fast terminal connection
 set wildignore=*.swp,*.bak,*.pyc,*.class " ingore such file
 set scrolloff=5 " show min lines when scroll screen
-set laststatus=2 " The value of this option influences when the last window will have a status line
-set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
 set encoding=utf-8 " set default file encoding
 set fileformats=unix " set file format, default use unix
 set formatoptions+=B " merge two un-ASCII code lines without spaces
@@ -46,7 +43,6 @@ set magic " Changes the special characters that can be used in search patterns
 set whichwrap+=<,>,h,l " Allow specified keys that move the cursor line
 set backspace=eol,start,indent " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set nowrapscan " dont search wrap file
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")} " show file message in status line
 set paste " set paste, for paste text from flipboard
 if $SHELL=~'bin/fish' " user system default shell, fix bug, we can use vim in different shell
     set shell=/bin/sh
@@ -114,8 +110,6 @@ Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/SelectBuf'
 Bundle 'scrooloose/syntastic'
 Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'delongw/nginx.vim'
-Bundle 'tomasr/molokai'
 Bundle 'tpope/vim-surround'
 Bundle 'mbbill/undotree'
 Bundle 'godlygeek/tabular'
@@ -124,6 +118,10 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Kris2k/mark.vim'
+
+Bundle 'delongw/nginx.vim'
+Bundle 'delongw/molokai'
+Bundle 'delongw/vim-statline'
 
 " ************************************
 " plugin
@@ -139,9 +137,9 @@ map <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " scrooloose/syntastic
-let g:syntastic_error_symbol='->'
-let g:syntastic_warning_symbol='->'
-let g:syntastic_check_on_open=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_check_on_open=0
 
 " kien/ctrlp
 let g:ctrlp_map = '<leader>p'
@@ -173,20 +171,19 @@ let g:enable_numbers=0
 nnoremap <F2> :NumbersOnOff<CR>
 
 " nathanaelkane/vim-indent-guides
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=16
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=16
 
-" tomasr/molokai
-" this is the config of theme
+"let g:indent_guides_auto_colors = 0
+"let g:indent_guides_start_level = 2
+"let g:indent_guides_guide_size = 1
+"let g:indent_guides_enable_on_vim_startup = 1
+"let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'TabbarToggle', 'CtrlP', 'UndotreeToggle']
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=8
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=8
+
+" delongw/vim-statline
+let g:statline_fugitive=1
+
+" delongw/molokai
 colorscheme molokai
-let g:molokai_original = 1
-highlight CursorLine   cterm=none ctermbg=236
-highlight Cursor       ctermfg=16  ctermbg=253
 
-" extra config, locate theme on bottom
 filetype plugin indent on
