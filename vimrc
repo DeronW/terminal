@@ -171,14 +171,13 @@ let g:enable_numbers=0
 nnoremap <F2> :NumbersOnOff<CR>
 
 " nathanaelkane/vim-indent-guides
-
-"let g:indent_guides_auto_colors = 0
-"let g:indent_guides_start_level = 2
-"let g:indent_guides_guide_size = 1
-"let g:indent_guides_enable_on_vim_startup = 1
-"let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'TabbarToggle', 'CtrlP', 'UndotreeToggle']
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=8
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=8
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'TabbarToggle', 'CtrlP', 'UndotreeToggle']
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=8
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=8
 
 " delongw/vim-statline
 let g:statline_fugitive=1
