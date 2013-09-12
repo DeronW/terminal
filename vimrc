@@ -116,7 +116,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'myusuf3/numbers.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Kris2k/mark.vim'
 
 Bundle 'delongw/nginx.vim'
@@ -137,9 +136,12 @@ map <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " scrooloose/syntastic
+let g:syntastic_enable_signs=0
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_check_on_open=0
+let g:syntastic_check_on_wq=0
+let g:syntastic_statusline_flag=1
 
 " kien/ctrlp
 let g:ctrlp_map = '<leader>p'
@@ -169,15 +171,6 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " myusuf3/numbers.vim
 let g:enable_numbers=0
 nnoremap <F2> :NumbersOnOff<CR>
-
-" nathanaelkane/vim-indent-guides
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'TabbarToggle', 'CtrlP', 'UndotreeToggle']
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=8
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=8
 
 " delongw/vim-statline
 let g:statline_fugitive=1
