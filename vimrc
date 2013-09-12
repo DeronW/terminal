@@ -137,12 +137,10 @@ map <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " scrooloose/syntastic
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_echo_current_error=0
-let g:syntastic_enable_signs=0
+"let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_checkers=['python']
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
-let g:syntastic_check_on_wq=0
 let g:syntastic_statusline_flag=1
 
 " kien/ctrlp
