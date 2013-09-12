@@ -32,7 +32,7 @@ set showmode " show current mode
 set hidden " hidden buffer, avoid mutile terminal edit same file
 set wildmode=list:longest " Completion mode that is used for the character specified with 'wildchar'.
 set ttyfast " Indicates a fast terminal connection
-set wildignore=*.swp,*.bak,*.pyc,*.class " ingore such file
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.db,*.sqlite3 " ingore such file
 set scrolloff=5 " show min lines when scroll screen
 set encoding=utf-8 " set default file encoding
 set fileformats=unix " set file format, default use unix
@@ -111,12 +111,13 @@ Bundle 'vim-scripts/SelectBuf'
 Bundle 'scrooloose/syntastic'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-surround'
-Bundle 'mbbill/undotree'
+"Bundle 'mbbill/undotree'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'Kris2k/mark.vim'
+Bundle 'kevinw/pyflakes-vim'
 
 Bundle 'delongw/nginx.vim'
 Bundle 'delongw/molokai'
@@ -136,10 +137,11 @@ map <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " scrooloose/syntastic
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_echo_current_error=0
 let g:syntastic_enable_signs=0
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
-let g:syntastic_check_on_open=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_statusline_flag=1
 
@@ -165,8 +167,8 @@ map <leader>w :FixWhitespace<CR>
 if has("persistent_undo")
     set undodir='/tmp/vim-undo/'
     set undofile
+    nnoremap <leader>u :UndotreeToggle<CR>
 endif
-nnoremap <leader>u :UndotreeToggle<CR>
 
 " myusuf3/numbers.vim
 let g:enable_numbers=0
