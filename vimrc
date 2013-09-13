@@ -111,14 +111,13 @@ Bundle 'vim-scripts/SelectBuf'
 Bundle 'scrooloose/syntastic'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-surround'
-"Bundle 'mbbill/undotree'
+Bundle 'mbbill/undotree'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'Kris2k/mark.vim'
 Bundle 'kevinw/pyflakes-vim'
-
 Bundle 'delongw/nginx.vim'
 Bundle 'delongw/molokai'
 Bundle 'delongw/vim-statline'
@@ -139,8 +138,11 @@ let g:tagbar_autofocus = 1
 " scrooloose/syntastic
 "let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_checkers=['python']
+let g:syntastic_echo_current_error=1
+let g:syntastic_enable_signs=1
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
+let g:syntastic_check_on_wq=1
 let g:syntastic_statusline_flag=1
 
 " kien/ctrlp
