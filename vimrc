@@ -14,8 +14,8 @@ set t_Co=256 " show vim in 256 color mode, this means vim will be colorful
 set autoread " auto reload file content
 set nobackup " no backup file
 set noswapfile " no *.swp file
-set cursorcolumn " high light current column
 set number " show numberline
+"set cursorcolumn " high light current column
 set cursorline " high light current line
 set selectmode=mouse,key
 set title " use file name as terminal title
@@ -77,6 +77,14 @@ set autoindent " auto indent in new line
 set cindent " use c like style indent
 
 " ************************************
+" map 2 short key in diff mode
+" ************************************
+if &diff
+    nnoremap - [czz
+    nnoremap + ]c
+endif
+
+" ************************************
 " extra function
 " ************************************
 
@@ -118,6 +126,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'Kris2k/mark.vim'
 Bundle 'kevinw/pyflakes-vim'
+Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'delongw/nginx.vim'
 Bundle 'delongw/molokai'
 Bundle 'delongw/vim-statline'
@@ -129,14 +138,13 @@ Bundle 'delongw/vim-statline'
 " NERDTree
 map <F5> :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$' ]
+let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '\.orig$']
 
 " majutsushi/tagbar
 map <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " scrooloose/syntastic
-"let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_checkers=['python']
 let g:syntastic_echo_current_error=1
 let g:syntastic_enable_signs=1
@@ -148,7 +156,7 @@ let g:syntastic_statusline_flag=1
 " kien/ctrlp
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux"
+set wildignore+=*/tmp/*,*.so,*.zip     " MacOSX/Linux"
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
 let g:ctrlp_working_path_mode=0
 let g:ctrlp_match_window_bottom=1
@@ -179,5 +187,11 @@ let g:statline_fugitive=1
 
 " delongw/molokai
 colorscheme molokai
+"let g:rehash256=1
+"set background=dark
+
+if &diff
+    hi CursorLine   ctermfg=16   ctermbg=255
+endif
 
 filetype plugin indent on
