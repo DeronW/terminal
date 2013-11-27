@@ -15,9 +15,8 @@ set autoread " auto reload file content
 set nobackup " no backup file
 set noswapfile " no *.swp file
 set number " show numberline
-"set cursorcolumn " high light current column
 set cursorline " high light current line
-set selectmode=mouse,key
+"set selectmode=mouse,key
 set title " use file name as terminal title
 set novisualbell " dont beep
 set noerrorbells " dont beep when occur error
@@ -43,7 +42,7 @@ set magic " Changes the special characters that can be used in search patterns
 set whichwrap+=<,>,h,l " Allow specified keys that move the cursor line
 set backspace=eol,start,indent " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set nowrapscan " dont search wrap file
-set paste " set paste, for paste text from flipboard
+"set paste " set paste, for paste text from flipboard
 if $SHELL=~'bin/fish' " user system default shell, fix bug, we can use vim in different shell
     set shell=/bin/sh
 endif
@@ -77,11 +76,19 @@ set autoindent " auto indent in new line
 set cindent " use c like style indent
 
 " ************************************
+" auto reload vim when vimrc is changed
+" ************************************
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost ~/.vimrc source ~/.vimrc
+augroup END " }
+
+" ************************************
 " map 2 short key in diff mode
 " ************************************
 if &diff
     nnoremap - [czz
-    nnoremap + ]c
+    nnoremap = ]c
 endif
 
 " ************************************
@@ -117,7 +124,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/SelectBuf'
 Bundle 'scrooloose/syntastic'
-Bundle 'bronson/vim-trailing-whitespace'
+"Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-surround'
 Bundle 'mbbill/undotree'
 Bundle 'godlygeek/tabular'
@@ -126,10 +133,19 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'Kris2k/mark.vim'
 Bundle 'kevinw/pyflakes-vim'
-Bundle 'Glench/Vim-Jinja2-Syntax'
+Bundle 'bling/vim-airline'
+Bundle 'jmcantrell/vim-virtualenv'
+
+" sinpmat function & dependances
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/vim-snippets'
+Bundle 'garbas/vim-snipmate'
+
+" self modify lib
 Bundle 'delongw/nginx.vim'
 Bundle 'delongw/molokai'
-Bundle 'delongw/vim-statline'
+"Bundle 'delongw/vim-statline'
 
 " ************************************
 " plugin
@@ -169,7 +185,7 @@ let g:ctrlp_follow_symlinks=1
 map <F3> <Plug>SelectBuf
 
 " bronson/vim-trailing-whitespace
-map <leader>w :FixWhitespace<CR>
+"map <leader>w :FixWhitespace<CR>
 
 " mbbill/undotree
 if has("persistent_undo")
@@ -185,13 +201,46 @@ nnoremap <F2> :NumbersOnOff<CR>
 " delongw/vim-statline
 let g:statline_fugitive=1
 
+" bling/vim-airline
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'"
+let g:airline_theme='badwolf'
+
 " delongw/molokai
 colorscheme molokai
 "let g:rehash256=1
 "set background=dark
 
+" ************************************
+" self define function & setting
+" ************************************
+
+function! s:FixWhitespace(line1,line2)
+    let l:save_cursor = getpos(".")
+    silent! execute ':' . a:line1 . ',' . a:line2 . 's/\s\+$//'
+    call setpos('.', l:save_cursor)
+endfunction
+command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
+map <leader>w :FixWhitespace<CR>
+
 if &diff
+    set cursorcolumn
     hi CursorLine   ctermfg=16   ctermbg=255
+    "hi DiffDelete      ctermfg=52  ctermbg=52
 endif
 
 filetype plugin indent on
