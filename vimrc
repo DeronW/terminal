@@ -43,6 +43,7 @@ set whichwrap+=<,>,h,l " Allow specified keys that move the cursor line
 set backspace=eol,start,indent " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set nowrapscan " dont search wrap file
 "set paste " set paste, for paste text from flipboard
+set laststatus=2 " always show status line
 if $SHELL=~'bin/fish' " user system default shell, fix bug, we can use vim in different shell
     set shell=/bin/sh
 endif
@@ -117,7 +118,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'majutsushi/tagbar'
-Bundle 'Raimondi/delimitMate'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'kien/ctrlp.vim'
@@ -132,7 +133,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'Kris2k/mark.vim'
-Bundle 'kevinw/pyflakes-vim'
 Bundle 'bling/vim-airline'
 Bundle 'jmcantrell/vim-virtualenv'
 
