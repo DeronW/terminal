@@ -111,13 +111,14 @@ inoremap <C-k> <Esc>:m-2<CR>
 " vim vundle
 " ************************************
 
-set rtp+=~/.vim/bundle/vundle/
+set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " vundle, bundle manage tool
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'majutsushi/tagbar'
+Bundle 'Raimondi/delimitMate'
 " Bundle 'Valloric/YouCompleteMe'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdcommenter'
@@ -195,8 +196,8 @@ if has("persistent_undo")
 endif
 
 " myusuf3/numbers.vim
-let g:enable_numbers=0
-nnoremap <F2> :NumbersOnOff<CR>
+let g:enable_numbers=1
+nnoremap <F2> :NumbersToggle<CR>
 
 " delongw/vim-statline
 let g:statline_fugitive=1
