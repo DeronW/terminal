@@ -17,6 +17,7 @@ set noswapfile " no *.swp file
 set number " show numberline
 set cursorline " high light current line
 "set selectmode=mouse,key
+"set mouse=a " enable mouse in vim
 set title " use file name as terminal title
 set novisualbell " dont beep
 set noerrorbells " dont beep when occur error
@@ -126,7 +127,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/SelectBuf'
 Bundle 'scrooloose/syntastic'
-"Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-surround'
 Bundle 'mbbill/undotree'
 Bundle 'godlygeek/tabular'
@@ -135,7 +135,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'Kris2k/mark.vim'
 Bundle 'bling/vim-airline'
-Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'wakatime/vim-wakatime'
 
 " sinpmat function & dependances
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -154,6 +154,8 @@ Bundle 'delongw/molokai'
 
 " NERDTree
 map <F5> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
+" autocmd vimenter * NERDTree
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '\.orig$']
 
@@ -183,10 +185,8 @@ let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
 
 " vim-scripts/selectbuf
-map <F3> <Plug>SelectBuf
-
-" bronson/vim-trailing-whitespace
-"map <leader>w :FixWhitespace<CR>
+" nmap <unique> <silent> <leader>b <Plug>SelectBuf
+"nmap <unique> <silent> <C-L> <Plug>SelectBuf
 
 " mbbill/undotree
 if has("persistent_undo")
@@ -223,8 +223,6 @@ let g:airline_theme='badwolf'
 
 " delongw/molokai
 colorscheme molokai
-"let g:rehash256=1
-"set background=dark
 
 " ************************************
 " self define function & setting
