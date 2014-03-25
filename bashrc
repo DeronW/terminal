@@ -113,4 +113,8 @@ alias ack='ack-grep'
 alias tmux="TERM=screen-256color-bce tmux"
 export LC_ALL=C
 
+# use default python venv
 source /home/delong/workspace/venv/bread/bin/activate
+
+# use rmv in default
+source /home/delong/.rvm/scripts/rvm
