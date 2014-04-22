@@ -103,6 +103,7 @@ let g:mapleader = "'"
 
 nnoremap ; :
 nnoremap <F4> :set wrap! wrap?<CR>
+nnoremap <silent> <leader>a :set wrap! wrap?<CR>
 noremap <C-j> :m+<CR>
 noremap <C-k> :m-2<CR>
 inoremap <C-j> <Esc>:m+<CR>
@@ -185,8 +186,8 @@ let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
 
 " vim-scripts/selectbuf
-" nmap <unique> <silent> <leader>b <Plug>SelectBuf
-"nmap <unique> <silent> <C-L> <Plug>SelectBuf
+nmap <silent> <leader>b <Plug>SelectBuf
+" nmap <unique> <silent> <C-L> <Plug>SelectBuf
 
 " mbbill/undotree
 if has("persistent_undo")
@@ -197,7 +198,8 @@ endif
 
 " myusuf3/numbers.vim
 let g:enable_numbers=1
-nnoremap <F2> :NumbersToggle<CR>
+" nnoremap <F2> :NumbersToggle<CR>
+nnoremap <silent> <leader>l :NumbersToggle<CR>
 
 " delongw/vim-statline
 let g:statline_fugitive=1
