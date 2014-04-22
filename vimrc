@@ -161,8 +161,9 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '\.orig$']
 
 " majutsushi/tagbar
-map <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
+map <F8> :TagbarToggle<CR>
+nmap <silent> <leader>t :TagbarToggle<CR>
 
 " scrooloose/syntastic
 let g:syntastic_python_checkers=['python']
