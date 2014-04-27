@@ -145,6 +145,10 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 
+" for ruby on rails
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+
 " self modify lib
 Bundle 'delongw/nginx.vim'
 Bundle 'delongw/molokai'
