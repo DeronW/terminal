@@ -109,6 +109,12 @@ noremap <C-k> :m-2<CR>
 inoremap <C-j> <Esc>:m+<CR>
 inoremap <C-k> <Esc>:m-2<CR>
 
+" easy move in multi windows, ^[l mean: Ctrl-v + Ctrl-l
+map l <C-w>l
+map k <C-w>k
+map j <C-w>j
+map h <C-w>h
+
 " ************************************
 " vim vundle
 " ************************************
@@ -121,14 +127,13 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'majutsushi/tagbar'
 Bundle 'Raimondi/delimitMate'
-" Bundle 'Valloric/YouCompleteMe'
-Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/SelectBuf'
 Bundle 'scrooloose/syntastic'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-surround'
 Bundle 'mbbill/undotree'
 Bundle 'godlygeek/tabular'
@@ -136,18 +141,14 @@ Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'Kris2k/mark.vim'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'bling/vim-airline'
-Bundle 'wakatime/vim-wakatime'
 
 " sinpmat function & dependances
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
-
-" for ruby on rails
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
 
 " self modify lib
 Bundle 'delongw/nginx.vim'
@@ -158,7 +159,7 @@ Bundle 'delongw/molokai'
 " plugin
 " ************************************
 
-" NERDTree
+" The-NERD-Tree
 map <F5> :NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 " autocmd vimenter * NERDTree
@@ -169,6 +170,18 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so
 let g:tagbar_autofocus = 1
 map <F8> :TagbarToggle<CR>
 nmap <silent> <leader>t :TagbarToggle<CR>
+
+" Raimondi/delimitMate
+let delimitMate_expand_cr=1
+
+" Lokaltog/vim-easymotion
+let g:EasyMotion_smartcase = 1
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 " scrooloose/syntastic
 let g:syntastic_python_checkers=['python']
@@ -182,7 +195,7 @@ let g:syntastic_statusline_flag=1
 " kien/ctrlp
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
-set wildignore+=*/tmp/*,*.so,*.zip     " MacOSX/Linux"
+set wildignore+=*/tmp/*,*.so,*.zip " MacOSX/Linux"
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
 let g:ctrlp_working_path_mode=0
 let g:ctrlp_match_window_bottom=1
@@ -222,7 +235,7 @@ let g:airline_right_sep = '◀'
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
@@ -246,8 +259,8 @@ map <leader>w :FixWhitespace<CR>
 
 if &diff
     set cursorcolumn
-    hi CursorLine   ctermfg=16   ctermbg=255
-    "hi DiffDelete      ctermfg=52  ctermbg=52
+    hi CursorLine ctermfg=16 ctermbg=255
+"hi DiffDelete ctermfg=52 ctermbg=52
 endif
 
 filetype plugin indent on
