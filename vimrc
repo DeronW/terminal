@@ -110,10 +110,10 @@ inoremap <C-j> <Esc>:m+<CR>
 inoremap <C-k> <Esc>:m-2<CR>
 
 " easy move in multi windows, ^[l mean: Ctrl-v + Ctrl-l
-map l <C-w>l
-map k <C-w>k
-map j <C-w>j
-map h <C-w>h
+map <A-l> <C-w>l
+map <A-k> <C-w>k
+map <A-j> <C-w>j
+map <A-h> <C-w>h
 
 " ************************************
 " vim vundle
