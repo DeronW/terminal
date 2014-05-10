@@ -20,8 +20,8 @@ git config --global color.status true
 git config --global merge.tool vimdiff
 
 # format
-# convert CRLF to LF at end of line
-git config --global core.autocrlf true
+# convert LF to CRLF at end of line
+git config --global core.autocrlf input
 
 # system
 git config --system receive.fsckObjects true
