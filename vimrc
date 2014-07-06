@@ -120,40 +120,42 @@ map <A-h> <C-w>h
 " ************************************
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
 " vundle, bundle manage tool
-Bundle 'gmarik/vundle'
-Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'majutsushi/tagbar'
-Bundle 'Raimondi/delimitMate'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'kien/ctrlp.vim'
-Bundle 'vim-scripts/genutils'
-Bundle 'vim-scripts/SelectBuf'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-surround'
-Bundle 'mbbill/undotree'
-Bundle 'godlygeek/tabular'
-Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'Kris2k/mark.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'bling/vim-airline'
+Plugin 'gmarik/vundle'
+Plugin 'vim-scripts/The-NERD-tree'
+Plugin 'majutsushi/tagbar'
+Plugin 'Raimondi/delimitMate'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-scripts/genutils'
+Plugin 'vim-scripts/SelectBuf'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'mbbill/undotree'
+Plugin 'godlygeek/tabular'
+Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'Kris2k/mark.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'bling/vim-airline'
 
 " sinpmat function & dependances
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'honza/vim-snippets'
-Bundle 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'honza/vim-snippets'
+Plugin 'garbas/vim-snipmate'
 
 " self modify lib
-Bundle 'delongw/nginx.vim'
-Bundle 'delongw/molokai'
-"Bundle 'delongw/vim-statline'
+Plugin 'delongw/nginx.vim'
+Plugin 'delongw/molokai'
+"Plugin 'delongw/vim-statline'
+
+call vuncle#end()
 
 " ************************************
 " plugin
