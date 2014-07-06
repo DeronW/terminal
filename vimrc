@@ -119,7 +119,7 @@ map <A-h> <C-w>h
 " vim vundle
 " ************************************
 
-set runtimepath+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " vundle, bundle manage tool
