@@ -29,9 +29,9 @@ vimrc
 
 推荐使用VIM7.4版本,虽然这套配置主要针对 ``python`` ,但是也同样试用于其它语言
 
-安装，管理插件前要先安装 [vundle](https://github.com/gmarik/vundle)
+安装，管理插件前要先安装 [vundle](https://github.com/gmarik/Vundle)
 安装完 ``vundle`` 后复制vimrc到当前用户目录下, 文件名为 .vimrc
-然后通过 ``vundle`` 命令安装所需插件 ``:BundleInstall``
+然后通过 ``vundle`` 命令安装所需插件 ``:PluginInstall``
 
 没有使用powerline,而选择了airline,合适就好,不用勉强使用过于强大的功能
 
