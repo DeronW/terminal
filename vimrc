@@ -127,35 +127,34 @@ Plugin 'gmarik/vundle'
 Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'majutsushi/tagbar'
 Plugin 'Raimondi/delimitMate'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/genutils'
 Plugin 'vim-scripts/SelectBuf'
 Plugin 'scrooloose/syntastic'
+Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 Plugin 'mbbill/undotree'
 Plugin 'godlygeek/tabular'
-Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'Kris2k/mark.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'bling/vim-airline'
 
-" sinpmat function & dependances
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
-Plugin 'garbas/vim-snipmate'
+"" sinpmat function & dependances
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'honza/vim-snippets'
+"Plugin 'garbas/vim-snipmate'
 
 " self modify lib
 Plugin 'delongw/nginx.vim'
 Plugin 'delongw/molokai'
-"Plugin 'delongw/vim-statline'
 
-call vuncle#end()
+call vundle#end()
 
 " ************************************
 " plugin
