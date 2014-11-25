@@ -22,6 +22,7 @@ git config --global merge.tool vimdiff
 # format
 # convert LF to CRLF at end of line
 git config --global core.autocrlf input
+git config --global core.safecrlf warn
 
 # system
 git config --system receive.fsckObjects true
