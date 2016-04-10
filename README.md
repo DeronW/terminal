@@ -10,17 +10,17 @@ terminal
 
 为什么选择这几种工具
 
-1. 命令行, bash VS zsh ?
+1. 命令行, bash vs. zsh ?
 > 功能够用即可, zsh可配置项很多但是也用不到,而且个人不喜欢 zsh 的命令补全方式和智能命令记忆
   如果为了命令行更加人性化， 倒是比较推荐适用 [fish](http://fishshell.com/)
 
-2. 分屏, screen VS tmux ?
+2. 分屏, screen vs. tmux ?
 > 原因很简单, 因为 tmux 更好看
 
-3. 编辑器 vim VS emacs ?
+3. 编辑器 vim vs. emacs ?
 > 听说了 emacs 的学习曲线后, 敬而远之
 
-4. 版本管理: git VS hg ?
+4. 版本管理: git vs. hg ?
 > 使用 git 做本版管理系统，因为它强大，普遍并且有 github 社区的存在。
   git 和 hg 各有优势，据说 facebook 在用 hg 做VCS
 
