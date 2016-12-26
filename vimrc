@@ -143,6 +143,7 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'Kris2k/mark.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'bling/vim-airline'
+Plugin 'editorconfig/editorconfig-vim'
 
 "" sinpmat function & dependances
 "Plugin 'MarcWeber/vim-addon-mw-utils'
