@@ -78,24 +78,10 @@
 # JavaScript
 --type-add=js:ext:js
 
-# JSP
-# http://www.oracle.com/technetwork/java/javaee/jsp/index.html
---type-add=jsp:ext:jsp,jspx,jspf,jhtm,jhtml
-
 # JSON
 # http://www.json.org/
 --type-add=json:ext:json
 
-# Less
-# http://www.lesscss.org/
---type-add=less:ext:less
-
-# Ruby
-# http://www.ruby-lang.org/
---type-add=ruby:ext:rb,rhtml,rjs,rxml,erb,rake,spec
---type-add=ruby:is:Rakefile
---type-add=ruby:firstlinematch:/^#!.*\bruby/
-
-# YAML
-# http://yaml.org/
---type-add=yaml:ext:yaml,yml
+# add by Deron@2018-01-05
+--ignore-directory=is:build
+--ignore-directory=is:cdn
