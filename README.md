@@ -7,6 +7,7 @@ terminal
 * tmux
 * vim
 * git
+* ack
 
 为什么选择这几种工具
 
@@ -61,3 +62,8 @@ git
 
 * 自定义了 ``git`` 的 [输出颜色](http://git-scm.com/book/ch7-1.html) ,
 * 重新格式化了 log 的 [输出格式](https://coderwall.com/p/euwpig) ,
+
+ack
+----
+* 优化了搜索的文件格式
+* 排除了一些库文件和压缩文件, 提升有效所有范围和搜索效率
