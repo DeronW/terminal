@@ -258,4 +258,7 @@ if &diff
 "hi DiffDelete ctermfg=52 ctermbg=52
 endif
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+ 
 filetype plugin indent on
