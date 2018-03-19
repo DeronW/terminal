@@ -123,7 +123,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " vundle, bundle manage tool
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'majutsushi/tagbar'
 Plugin 'Raimondi/delimitMate'
@@ -152,8 +152,8 @@ Plugin 'editorconfig/editorconfig-vim'
 "Plugin 'garbas/vim-snipmate'
 
 " self modify lib
-Plugin 'delongw/nginx.vim'
-Plugin 'delongw/molokai'
+Plugin 'DeronW/nginx.vim'
+Plugin 'DeronW/molokai'
 
 call vundle#end()
 
@@ -237,7 +237,7 @@ let g:airline_symbols.branch = '⎇ '
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'"
 
-" delongw/molokai
+" DeronW/molokai
 colorscheme molokai
 
 " ************************************
