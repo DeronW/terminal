@@ -30,6 +30,23 @@ Ubuntu
 Mac
 > brew install curl
 
+## 字体安装
+
+写代码需要的字体至少需要等宽字体
+
+推荐字体:
+
+[Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
+
+安装
+
+    brew tap caskroom/fonts
+    brew cask install font-source-code-pro
+
+[Front for code](http://input.fontbureau.com/)
+
+font for code 可以在线定制字体, 然后下载使用
+
 ## 自动配置
 
 ### 快捷命令
@@ -38,7 +55,7 @@ Mac
 
 Usage:
 
-    curl -fsSL https://raw.githubusercontent.com/DeronW/terminal/master/vimrc >> a
+    curl -fsSL https://raw.githubusercontent.com/DeronW/terminal/master/quick-setup.sh | sh
 
 
 ### bash
@@ -109,6 +126,8 @@ Ubuntu
 Mac
 > brew install tmux
 
+![screenshot](https://raw.githubusercontent.com/DeronW/terminal/master/screenshots/622622648501670484.jpg)
+
 Usage:
 
     curl https://raw.githubusercontent.com/DeronW/terminal/master/tmux.conf >> ~/.tmux.conf --progress
@@ -121,15 +140,21 @@ Usage:
 * 自定义了 ``git`` 的 [输出颜色](http://git-scm.com/book/ch7-1.html)
 * 重新格式化了 log 的 [输出格式](https://coderwall.com/p/euwpig)
 
-Usage:
-
-    curl https://raw.githubusercontent.com/DeronW/terminal/master/setup-git.sh | bash -s stable
-
-### vim
+![screenshot](https://raw.githubusercontent.com/DeronW/terminal/master/screenshots/1._git_lg__git_.jpg)
 
 Usage:
 
-    curl https://raw.githubusercontent.com/DeronW/terminal/master/setup-vim.sh | bash -s stable
+    curl https://raw.githubusercontent.com/DeronW/terminal/master/setup-git.sh | sh
+
+### Vim
+
+![screenshot](https://raw.githubusercontent.com/DeronW/terminal/master/screenshots/vi-vim-cheat-sheet-sch.gif)
+
+Usage:
+
+    curl https://raw.githubusercontent.com/DeronW/terminal/master/setup-vim.sh | sh
+
+more detail check [https://github.com/DeronW/terminal/tree/master/vim](https://github.com/DeronW/terminal/tree/master/vim)
 
 ### 为什么选择这几种工具
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # user
-git config --global user.name "Rich Greenwood"
+git config --global user.name "Weber Greenwood"
 git config --global user.email w.del@qq.com
 
 # editor
@@ -26,7 +26,7 @@ git config --global core.autocrlf input
 git config --global core.safecrlf warn
 
 # system
-git config --system receive.fsckObjects true
+#git config --system receive.fsckObjects true
 
 # self define
 # pretty git log 
