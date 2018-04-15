@@ -1,3 +1,4 @@
+
 " **********************************
 " last config
 " should placed on the bottom of .vimrc

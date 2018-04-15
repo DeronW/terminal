@@ -1,3 +1,4 @@
+
 " **********************************
 " first config
 " placed on top of .vimrc
