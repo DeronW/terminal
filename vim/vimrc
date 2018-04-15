@@ -1,10 +1,8 @@
-" based on vundle https://github.com/gmarik/vundle
-
 " **********************************
-" common start
+" modify default property
 " **********************************
 set nocompatible " not compatible with vi
-filetype off " detect file type, turn off, needed by vundle
+filetype off " detect file type, turn off, needed by Vundle
 syntax on " high light keyword
 filetype indent on " use different indent format in different file
 filetype plugin on " enable plugin for different filetype
@@ -43,11 +41,11 @@ set magic " Changes the special characters that can be used in search patterns
 set whichwrap+=<,>,h,l " Allow specified keys that move the cursor line
 set backspace=eol,start,indent " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set nowrapscan " dont search wrap file
-"set paste " set paste, for paste text from flipboard
 set laststatus=2 " always show status line
 if $SHELL=~'bin/fish' " user system default shell, fix bug, we can use vim in different shell
     set shell=/bin/sh
 endif
+
 " ***********************************
 " interface
 " ***********************************
@@ -116,16 +114,19 @@ map <A-j> <C-w>j
 map <A-h> <C-w>h
 
 " ************************************
-" vim vundle
+" Vundle
 " ************************************
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" vundle, bundle manage tool
+" Vundle, bundle manage tool
 Plugin 'VundleVim/Vundle.vim'
+
+" editor enhance plugin
 Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'majutsushi/tagbar'
+
 Plugin 'Raimondi/delimitMate'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'

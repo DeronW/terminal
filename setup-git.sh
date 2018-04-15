@@ -1,6 +1,7 @@
+#!/usr/bin/env bash
 
 # user
-git config --global user.name "delong"
+git config --global user.name "Rich Greenwood"
 git config --global user.email w.del@qq.com
 
 # editor
