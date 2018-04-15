@@ -26,7 +26,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 " ------------------------------------
 
-
 " ------------------------------------
 " 底部状态栏
 Plugin 'bling/vim-airline'
@@ -48,11 +47,6 @@ let g:airline_symbols.whitespace = 'Ξ'"
 " ------------------------------------
 
 " ------------------------------------
-" 在状态栏 显示 Buffer数量
-Plugin 'vim-bufferline'
-" ------------------------------------
-
-" ------------------------------------
 " 相对行数显示
 Plugin 'myusuf3/numbers.vim'
 let g:enable_numbers=1
@@ -68,8 +62,9 @@ nmap <silent> <leader>t :TagbarToggle<CR>
 " ------------------------------------
 
 " ------------------------------------
-" 引号/括号 自动闭合补全插件
+" 引号/括号 编辑中的文件菜单
 Plugin 'vim-scripts/SelectBuf'
+Plugin 'vim-scripts/genutils'
 " vim-scripts/selectbuf
 nmap <silent> <leader>b <Plug>SelectBuf
 " nmap <unique> <silent> <C-L> <Plug>SelectBuf
@@ -201,5 +196,4 @@ Plugin 'DeronW/molokai'
 
 """ backups
 "Plugin 'Valloric/YouCompleteMe'
-"Plugin 'vim-scripts/genutils'
 "Plugin 'Shougo/neocomplete.vim'
