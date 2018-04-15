@@ -65,7 +65,6 @@ nmap <silent> <leader>t :TagbarToggle<CR>
 " 引号/括号 编辑中的文件菜单
 Plugin 'vim-scripts/SelectBuf'
 Plugin 'vim-scripts/genutils'
-" vim-scripts/selectbuf
 nmap <silent> <leader>b <Plug>SelectBuf
 " nmap <unique> <silent> <C-L> <Plug>SelectBuf
 " ------------------------------------
@@ -150,7 +149,6 @@ Plugin 'tpope/vim-surround'
 " ------------------------------------
 " 插销编辑
 Plugin 'mbbill/undotree'
-" mbbill/undotree
 if has("persistent_undo")
     set undodir='/tmp/vim-undo/'
     set undofile
