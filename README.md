@@ -1,6 +1,6 @@
 # Terminal
 
-该项目包含适用于linux（Ubuntu）/ MacOS终端下几个常用工具的配置项(只有配置项, 不包含工具本身)
+该项目包含适用于linux（Ubuntu）/ MacOS终端下几个常用工具的配置项(只有配置项, 不包含工具本身)
 
 ## 依赖工具
 
@@ -38,7 +38,7 @@ Mac
 
 Usage:
 
-    curl -fsSL https://raw.githubusercontent.com/DeronW/terminal/master/vimrc >> a
+    curl -fsSL https://raw.githubusercontent.com/DeronW/terminal/master/vimrc >> a
 
 
 ### bash
@@ -47,7 +47,7 @@ Usage:
 
 Usage:
 
-    curl https://raw.githubusercontent.com/DeronW/terminal/master/bashrc -o ~/.bashrc --progress
+    curl https://raw.githubusercontent.com/DeronW/terminal/master/bashrc -o ~/.bashrc --progress
 
 使用 ``fish`` 或 ``zsh`` 作为默认shell后, 就不需要再配置 bash 了
 
@@ -63,9 +63,9 @@ Ubuntu
 Mac
 > brew install fish
 
-将默认shell修改成fish
+将默认shell修改成fish
 
-> chsh -s fish
+> chsh -s fish
 
 on Mac, you should set Terminal preferences
 
@@ -73,7 +73,7 @@ on Mac, you should set Terminal preferences
 
 Usage:
 
-    curl https://raw.githubusercontent.com/DeronW/terminal/master/fish >> ~/.config/fish/fish.config
+    curl https://raw.githubusercontent.com/DeronW/terminal/master/fish >> ~/.config/fish/fish.config --progress
 
 类似oh-my-zsh, 在fish shell基础上也出现了
 
@@ -95,7 +95,7 @@ Mac
 
 Usage:
 
-    curl https://raw.githubusercontent.com/DeronW/terminal/master/ackrc >> ~/.ackrc
+    curl https://raw.githubusercontent.com/DeronW/terminal/master/ackrc >> ~/.ackrc --progress
 
 ### tmux
 
@@ -111,7 +111,7 @@ Mac
 
 Usage:
 
-    curl https://raw.githubusercontent.com/DeronW/terminal/master/tmux.conf >> ~/.tmux.conf
+    curl https://raw.githubusercontent.com/DeronW/terminal/master/tmux.conf >> ~/.tmux.conf --progress
 
 定义颜色, 使用 "xterm" 的 terminal 颜色方案, 
 这样才不会造成 Vim 的颜色主题混乱
@@ -149,3 +149,4 @@ Usage:
 
 5. fish vs zsh?
 > fish is more simple, clean, pure, easy to config
+
