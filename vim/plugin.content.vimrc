@@ -192,6 +192,11 @@ Plugin 'DeronW/nginx.vim'
 Plugin 'DeronW/molokai'
 " ------------------------------------
 
+" ------------------------------------
+" go语言
+Plugin 'fatih/vim-go'
+" ------------------------------------
+
 """ backups
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'Shougo/neocomplete.vim'
