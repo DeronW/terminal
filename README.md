@@ -156,6 +156,21 @@ Usage:
 
 more detail check [https://github.com/DeronW/terminal/tree/master/vim](https://github.com/DeronW/terminal/tree/master/vim)
 
+### Task
+
+**Finished**
+
+- [*] bash auto config
+- [*] ack auto config
+- [*] Vim auto config
+- [*] git auto config
+
+**TODO**
+
+- [] fish shell auto config
+- [] fish shell self define functions
+
+
 ### 为什么选择这几种工具
 
 1. 命令行, bash vs. zsh ?
