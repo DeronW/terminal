@@ -160,15 +160,15 @@ more detail check [https://github.com/DeronW/terminal/tree/master/vim](https://g
 
 **Finished**
 
-- [x] bash auto config
-- [x] ack auto config
-- [x] Vim auto config
-- [x] git auto config
+- [x] auto config bash
+- [x] auto config ack
+- [x] auto config VIM
+- [x] auto config git
 
 **TODO**
 
-- [ ] fish shell auto config
-- [] fish shell self define functions
+- [ ] auto config fish shell
+- [ ] self define fish shell functions
 
 
 ### 为什么选择这几种工具
