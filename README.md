@@ -160,14 +160,14 @@ more detail check [https://github.com/DeronW/terminal/tree/master/vim](https://g
 
 **Finished**
 
-- [*] bash auto config
-- [*] ack auto config
-- [*] Vim auto config
-- [*] git auto config
+- [x] bash auto config
+- [x] ack auto config
+- [x] Vim auto config
+- [x] git auto config
 
 **TODO**
 
-- [] fish shell auto config
+- [ ] fish shell auto config
 - [] fish shell self define functions
 
 
