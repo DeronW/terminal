@@ -197,6 +197,11 @@ Plugin 'DeronW/molokai'
 Plugin 'fatih/vim-go'
 " ------------------------------------
 
+" ------------------------------------
+" Vue 框架 https://cn.vuejs.org/
+Plugin 'posva/vim-vue'
+" ------------------------------------
+
 """ backups
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'Shougo/neocomplete.vim'
