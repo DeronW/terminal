@@ -21,8 +21,9 @@ nnoremap <F4> :set wrap! wrap?<CR>
 nnoremap <silent> <leader>a :set wrap! wrap?<CR>
 noremap <C-j> :m+<CR>
 noremap <C-k> :m-2<CR>
-inoremap <C-j> <Esc>:m+<CR>
-inoremap <C-k> <Esc>:m-2<CR>
+inoremap <C-j> <Esc>:m+<CR>i
+inoremap <C-k> <Esc>:m-2<CR>i
+nnoremap <leader>s <C-^>
 
 " easy move in multi windows, ^[l mean: Ctrl-v + Ctrl-l
 map <A-l> <C-w>l
