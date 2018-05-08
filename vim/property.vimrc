@@ -42,6 +42,7 @@ set whichwrap+=<,>,h,l " Allow specified keys that move the cursor line
 set backspace=eol,start,indent " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
 set nowrapscan " dont search wrap file
 set laststatus=2 " always show status line
+set timeout timeoutlen=200 ttimeoutlen=100
 
 " fix bug, Vim does't work with fish shell, so use default sh in Vim
 if $SHELL=~'bin/fish' " user system default shell, we can use vim in different shell
