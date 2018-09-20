@@ -33,12 +33,16 @@ function push --argument remote branch
         # git add .
         set COMMENT (git diff --shortstat)
         git commit -a -m "No Comment" -m $COMMENT
+        git fetch
         if test -n "$branch"
+            git rebase $remote/$branch
             git push $remote $branch
         else if test -n "$remote"
+            git rebase origin/$remote
             git push origin $remote
         else
             set BR (git describe --contains --all HEAD)
+            git rebase origin/$BR
             git push origin $BR
         end
     else
