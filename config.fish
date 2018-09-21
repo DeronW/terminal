@@ -30,8 +30,16 @@ end
 
 function push --argument remote branch
     if test -d .git
-        # git add .
-        set COMMENT (git diff --shortstat)
+        git add -u
+
+        set COMMENT (git diff --shortstat --cached)
+        if test -n "$COMMENT"
+            echo "Got changes" $COMMENT
+        else
+            echo "No file changes"
+            return 0
+        end
+
         git commit -a -m "No Comment" -m $COMMENT
         git fetch
         if test -n "$branch"

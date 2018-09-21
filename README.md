@@ -168,7 +168,9 @@ more detail check [https://github.com/DeronW/terminal/tree/master/vim](https://g
 **TODO**
 
 - [ ] auto config fish shell
-- [ ] self define fish shell functions
+- [x] fish shell function: shortcut git pull
+- [x] fish shell function: shortcut git push
+- [ ] self deinfe fish shell functions
 
 
 ### 为什么选择这几种工具
