@@ -37,8 +37,7 @@ function push --argument remote branch
             echo "Got changes" $COMMENT
             git commit -a -m "No Comment" -m $COMMENT
         else
-            echo "No file changes"
-            return 0
+            echo "No file changes, only sync with origin repo"
         end
 
         git fetch
