@@ -35,12 +35,12 @@ function push --argument remote branch
         set COMMENT (git diff --shortstat --cached)
         if test -n "$COMMENT"
             echo "Got changes" $COMMENT
+            git commit -a -m "No Comment" -m $COMMENT
         else
             echo "No file changes"
             return 0
         end
 
-        git commit -a -m "No Comment" -m $COMMENT
         git fetch
         if test -n "$branch"
             git rebase $remote/$branch
