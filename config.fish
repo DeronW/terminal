@@ -48,7 +48,7 @@ function push --argument remote branch
             git rebase origin/$remote
             git push origin $remote
         else
-            set BR (git describe --contains --all HEAD)
+            set BR (git symbolic-ref --short -q HEAD)
             git rebase origin/$BR
             git push origin $BR
         end
