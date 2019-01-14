@@ -198,6 +198,16 @@ Plugin 'fatih/vim-go'
 " ------------------------------------
 
 " ------------------------------------
+" GraphQL 2016 draft specification
+Plugin 'jparise/vim-graphql'
+" ------------------------------------
+
+" ------------------------------------
+"  JavaScript / TypeScript support
+Plugin 'pangloss/vim-javascript'
+" ------------------------------------
+
+" ------------------------------------
 " Vue 框架 https://cn.vuejs.org/
 Plugin 'posva/vim-vue'
 " ------------------------------------
