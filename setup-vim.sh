@@ -1,5 +1,5 @@
 set -e
-echo "Cleanup .vimrck and .vin/"
+echo "Cleanup .vimrck and .vim/"
 rm -rf ~/.vimrc ~/.vim
 
 # download Vundle first
