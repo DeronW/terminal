@@ -156,7 +156,7 @@ let g:ctrlp_follow_symlinks=1
 
 " ------------------------------------
 " 文件查找
-Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 nmap <Leader>f :FZF<CR>
 " ------------------------------------
 
