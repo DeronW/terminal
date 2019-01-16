@@ -1,7 +1,13 @@
 
 " ************************************
-" auto reload vim when vimrc is changed
+" selfdefine functions
 " ************************************
+
+" auto reload init.vim after modify
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost ~/.config/nvim/init.vim source ~/.config/nvim/init.vim
+augroup END " }
 
 " trim whitespace 
 function! s:FixWhitespace(line1,line2)
