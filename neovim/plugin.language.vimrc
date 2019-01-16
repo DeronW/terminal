@@ -5,7 +5,7 @@
 
 " ------------------------------------
 " Golang , this is optional
-Plug 'zchee/nvim-go', { 'do': 'make', 'for': "go" }
+Plug 'zchee/nvim-go', { 'do': 'make', 'for': 'go' }
 " ------------------------------------
 
 " ------------------------------------
