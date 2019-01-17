@@ -160,8 +160,7 @@ let g:ctrlp_follow_symlinks=1
 
 " ------------------------------------
 " 文件查找
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-nmap <Leader>f :FZF<CR>
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 " ------------------------------------
 
 " ------------------------------------
