@@ -17,7 +17,6 @@ endif
 " extra function
 " ************************************
 nnoremap ; :
-nnoremap <F4> :set wrap! wrap?<CR>
 nnoremap <silent> <leader>a :set wrap! wrap?<CR>
 noremap <C-j> :m+<CR>
 noremap <C-k> :m-2<CR>

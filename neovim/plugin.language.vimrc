@@ -32,3 +32,11 @@ Plug 'DeronW/nginx.vim'
 " 自动补全, coc 名字来自 Conquer of Completion
 " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 " ------------------------------------
+
+" ------------------------------------
+" 基于 Prettier 的代码格式化
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+let g:prettier#config#print_width = 120
+let g:prettier#autoformat = 0
+nmap <Leader>f <Plug>(Prettier)
+" ------------------------------------

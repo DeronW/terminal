@@ -32,7 +32,6 @@ set wildmode=list:longest " Completion mode that is used for the character speci
 set ttyfast " Indicates a fast terminal connection
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.db,*.sqlite3 " ingore such file
 set scrolloff=5 " show min lines when scroll screen
-set encoding=utf-8 " set default file encoding
 set fileformats=unix " set file format, default use unix
 set formatoptions+=B " merge two un-ASCII code lines without spaces
 set completeopt=longest,menu " A comma separated list of options for Insert mode completion
