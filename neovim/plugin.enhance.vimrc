@@ -89,7 +89,7 @@ let g:EasyMotion_smartcase = 1
 " Plug 'flazz/vim-colorschemes'
 
 " 自定义主题 molokai
-Plugin 'DeronW/molokai'
+Plug 'DeronW/molokai'
 " ------------------------------------
 
 " ------------------------------------
