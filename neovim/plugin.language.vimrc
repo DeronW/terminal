@@ -30,5 +30,5 @@ Plug 'DeronW/nginx.vim'
 
 " ------------------------------------
 " 自动补全, coc 名字来自 Conquer of Completion
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 " ------------------------------------
