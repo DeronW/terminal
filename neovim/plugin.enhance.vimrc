@@ -26,7 +26,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " ------------------------------------
 " 底部状态栏
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 " 在底部显示git状态
 let g:statline_fugitive=1
@@ -84,17 +84,21 @@ let g:EasyMotion_smartcase = 1
 " ------------------------------------
 
 " ------------------------------------
-" 主题颜色大全
-Plug 'flazz/vim-colorschemes'
+" 主题
+" 颜色大全
+" Plug 'flazz/vim-colorschemes'
+
+" 自定义主题 molokai
+Plugin 'DeronW/molokai'
 " ------------------------------------
 
 " ------------------------------------
 " 全文检索
-Plug 'mhinz/vim-grepper'
+Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 " ------------------------------------
 
 " ------------------------------------
-" ack搜索, vim-grepper 和 ack 功能相同
+" ack搜索, vim-grepper 比 ack 功能更多
 Plug 'mileszs/ack.vim'
 " ------------------------------------
 
