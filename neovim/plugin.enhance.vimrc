@@ -191,13 +191,13 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " ------------------------------------
 
 " ------------------------------------
-" 取消编辑
-Plug 'mbbill/undotree'
-if has("persistent_undo")
-    set undodir='/tmp/vim-undo/'
-    set undofile
-    nnoremap <leader>u :UndotreeToggle<CR>
-endif
+" 编辑
+" Plug 'mbbill/undotree'
+" if has("persistent_undo")
+"     set undodir='/tmp/vim-undo/'
+"     set undofile
+"     nnoremap <leader>u :UndotreeToggle<CR>
+" endif
 " ------------------------------------
 
 " ------------------------------------
