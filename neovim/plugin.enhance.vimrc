@@ -143,7 +143,7 @@ nmap <leader>b :CtrlPBuffer<CR>
 " 文件查找
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-let g:fzf_command_prefix = 'fz'
+let g:fzf_command_prefix = 'Fz'
 let g:fzf_layout = { 'down': 10 }
 nmap <leader>ff :FZF<CR>
 nmap <leader>fb :FzBuffers<CR>
