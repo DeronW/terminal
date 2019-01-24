@@ -131,9 +131,9 @@ nmap <leader>lt :Limelight!!<CR>
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_custom_ignore = {
-    'dir': '\v[\/]\.(git|hg|svn|rvm)$|node_modules',
-    'file': '\v\.(exe|so|dll|swp)$'
-}
+\ 'dir': '\v[\/]\.(git|hg|svn|rvm)$|node_modules',
+\ 'file': '\v\.(exe|so|dll|swp)$'
+\ }
 " let g:ctrlp_working_path_mode=0
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:15'
 nmap <leader>b :CtrlPBuffer<CR>
