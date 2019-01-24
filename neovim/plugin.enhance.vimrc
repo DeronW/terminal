@@ -176,18 +176,9 @@ let g:syntastic_statusline_flag=1
 " ------------------------------------
 
 " ------------------------------------
-" multi cursor
+" multiple cursors
 Plug 'terryma/vim-multiple-cursors'
 let g:multi_cursor_use_default_mapping=0
-" Default mapping
-let g:multi_cursor_start_word_key      = '<C-0>'
-let g:multi_cursor_select_all_word_key = '<A-0>'
-let g:multi_cursor_start_key           = 'g<C-0>'
-let g:multi_cursor_select_all_key      = 'g<A-0>'
-let g:multi_cursor_next_key            = '<C-0>'
-let g:multi_cursor_prev_key            = '<C-9>'
-let g:multi_cursor_skip_key            = '<C-8>'
-let g:multi_cursor_quit_key            = '<Esc>'
 " ------------------------------------
 
 " ------------------------------------
