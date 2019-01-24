@@ -12,12 +12,12 @@ official website [https://neovim.io/](https://neovim.io/)
 
 Vim 功能扩展
 
+-   [vim-startify](https://github.com/mhinz/vim-startify) 欢迎页面
 -   [nerdtree](https://github.com/scrooloose/nerdtree) 目录树插件
 -   [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) nerdtree 的插件
 -   [vim-airline](https://github.com/vim-airline/vim-airline) 底部状态栏
 -   [numbers](http://myusuf3.github.io/numbers.vim/) 显示与当前所在行相对的行数字
 -   [tagbar](http://majutsushi.github.io/tagbar/) Outline 工具
--   [SelectBuf](https://github.com/vim-scripts/SelectBuf) 编辑中文件列表 需要配合 [genutils](https://github.com/vim-scripts/genutils) 使用
 
 Vim 输入扩展
 
@@ -34,8 +34,19 @@ Vim 输入扩展
 -   [vim-fugitive](https://github.com/tpope/vim-fugitive) Git
 -   [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) editorconfig 插件
 -   [mark.vim](https://github.com/Kris2k/mark.vim) 代码标记
--   [ack.vim](https://github.com/mileszs/ack.vim) 代码搜索
--   [vim-over](https://github.com/osyo-manga/vim-over) 替换预览
+-   [far](https://github.com/brooth/far.vim) 替换
+-   [vim-easy-align](https://github.com/junegunn/vim-easy-align) 自动对齐
+-   [limelight](https://github.com/junegunn/limelight.vim) 关灯模式(只高亮当前方法)
+
+编程语言
+
+-   [graphql](https://github.com/jparise/vim-graphql)
+-   [javascript](https://github.com/pangloss/vim-javascript)
+-   [vue](https://github.com/posva/vim-vue)
+
+集成功能
+
+-   [wakatime](https://github.com/wakatime/vim-wakatime) 写代码记录
 
 自定义插件
 

@@ -38,5 +38,6 @@ Plug 'DeronW/nginx.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 let g:prettier#config#print_width = 120
 let g:prettier#autoformat = 0
-nmap <Leader>f <Plug>(Prettier)
+let g:prettier#config#tab_width = 4
+nmap <leader>== <plug>(PrettierAsync)
 " ------------------------------------

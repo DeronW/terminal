@@ -4,16 +4,17 @@
 " ************************************
 
 " ------------------------------------
+" 欢迎页面, 包含 cow say
+Plug 'mhinz/vim-startify'
+" ------------------------------------
+
+" ------------------------------------
 " 目录树
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 map <C-n> :NERDTreeToggle<CR>
 " autocmd vimenter * NERDTree " 进入Vim后自动打开nerdtree
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '\.orig$']
-
-" 如果vim打开的是目录, 则自动打开 nerdtree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " 如果当前窗口只剩 nerdtree, 自动关闭窗口
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -59,14 +60,6 @@ nmap <silent> <leader>t :TagbarToggle<CR>
 " ------------------------------------
 
 " ------------------------------------
-" 打开最近编辑文件列表
-Plug 'jeetsukumaran/vim-buffergator'
-let g:buffergator_viewport_split_policy = "T"
-let g:buffergator_suppress_keymaps = 1
-map <silent> <Leader>b :BuffergatorToggle<CR>
-" ------------------------------------
-
-" ------------------------------------
 " 引号/括号 自动闭合补全插件
 Plug 'Raimondi/delimitMate'
 let delimitMate_expand_cr=1
@@ -90,16 +83,6 @@ let g:EasyMotion_smartcase = 1
 
 " 自定义主题 molokai
 Plug 'DeronW/molokai'
-" ------------------------------------
-
-" ------------------------------------
-" 全文检索
-Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-" ------------------------------------
-
-" ------------------------------------
-" ack搜索, vim-grepper 比 ack 功能更多
-Plug 'mileszs/ack.vim'
 " ------------------------------------
 
 " ------------------------------------
@@ -140,27 +123,32 @@ Plug 'brooth/far.vim'
 " ------------------------------------
 " 黑灯模式
 Plug 'junegunn/limelight.vim'
-nmap <Leader>lt :Limelight!!<CR>
+nmap <leader>lt :Limelight!!<CR>
 " ------------------------------------
 
 " ------------------------------------
 " 文件查找 ### TODO tobe replaced
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_map = '<leader>p'
-let g:ctrlp_cmd = 'CtrlP'
-set wildignore+=*/tmp/*,*.so,*.zip,node_modules/* " MacOSX/Linux"
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
-let g:ctrlp_working_path_mode=0
-let g:ctrlp_match_window_bottom=1
-let g:ctrlp_max_height=15
-let g:ctrlp_match_window_reversed=0
-let g:ctrlp_mruf_max=500
-let g:ctrlp_follow_symlinks=1
+let g:ctrlp_custom_ignore = {
+    'dir': '\v[\/]\.(git|hg|svn|rvm)$|node_modules',
+    'file': '\v\.(exe|so|dll|swp)$'
+}
+" let g:ctrlp_working_path_mode=0
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:15'
+nmap <leader>b :CtrlPBuffer<CR>
 " ------------------------------------
 
 " ------------------------------------
 " 文件查找
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+let g:fzf_command_prefix = 'fz'
+let g:fzf_layout = { 'down': 10 }
+nmap <leader>ff :FZF<CR>
+nmap <leader>fb :FzBuffers<CR>
+nmap <leader>fg :FzGFiles?<CR>
+nmap <leader>fa :FzAg<CR>
 " ------------------------------------
 
 " ------------------------------------

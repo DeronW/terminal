@@ -9,8 +9,6 @@ set nobackup " no backup file
 set noswapfile " no *.swp file
 set number " show numberline
 set cursorline " high light current line
-"set selectmode=mouse,key
-"set mouse=a " enable mouse in vim
 set title " use file name as terminal title
 set tabstop=4 " set width of 'tab'
 set shiftwidth=4 " number of spaces to use for auto indent
@@ -20,7 +18,7 @@ set shiftround " Round indent to multiple of 'shiftwidth', Applies to > and < co
 set showmode " show current mode
 set hidden " hidden buffer, avoid mutile terminal edit same file
 set wildmode=list:longest " Completion mode that is used for the character specified with 'wildchar'.
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.db,*.sqlite3 " ingore such file
+set wildignore=*/tmp/*,*.so,*.swp,*.zip,*.bak,*.pyc,*.class,*.db,*.sqlite3 " ingore such file
 set scrolloff=5 " show min lines when scroll screen
 set fileformats=unix " set file format, default use unix
 set formatoptions+=B " merge two un-ASCII code lines without spaces
