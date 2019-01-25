@@ -152,18 +152,6 @@ nmap <leader>fa :FzAg<CR>
 " ------------------------------------
 
 " ------------------------------------
-" 语法检查
-Plug 'scrooloose/syntastic'
-let g:syntastic_python_checkers=['python']
-let g:syntastic_echo_current_error=1
-let g:syntastic_enable_signs=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_check_on_wq=1
-let g:syntastic_statusline_flag=1
-" ------------------------------------
-
-" ------------------------------------
 " multiple cursors
 Plug 'terryma/vim-multiple-cursors'
 let g:multi_cursor_use_default_mapping=0

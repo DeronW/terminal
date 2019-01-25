@@ -4,6 +4,18 @@
 """
 
 " ------------------------------------
+" 语法检查, 能检查主流编程语言
+Plug 'scrooloose/syntastic'
+let g:syntastic_python_checkers=['python']
+let g:syntastic_echo_current_error=1
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_check_on_wq=1
+let g:syntastic_statusline_flag=1
+" ------------------------------------
+
+" ------------------------------------
 " Golang , this is optional
 " Plug 'zchee/nvim-go', { 'do': 'make', 'for': 'go' }
 " ------------------------------------
@@ -35,9 +47,14 @@ Plug 'DeronW/nginx.vim'
 
 " ------------------------------------
 " 基于 Prettier 的代码格式化
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'prettier/vim-prettier', {
+\ 'do': 'npm install',
+\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
+\ }
 let g:prettier#config#print_width = 120
 let g:prettier#autoformat = 0
 let g:prettier#config#tab_width = 4
+let g:prettier#config#trailing_comma = 'all'
+let g:prettier#config#single_quote = 'false'
 nmap <leader>== <plug>(PrettierAsync)
 " ------------------------------------
