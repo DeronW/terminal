@@ -22,7 +22,6 @@ curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/plugin.e
 curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/functions.vimrc >> ~/.config/nvim/init.vim
 curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/foot.vimrc >> ~/.config/nvim/init.vim
 
-echo "starting install Vim plugins"
+#echo "starting install Vim plugins"
 nvim +PlugInstall +qall # install vim plugin
-
-echo "\033[32m Nice try! \033[0m"
+#echo "\033[32m Nice try! \033[0m"
