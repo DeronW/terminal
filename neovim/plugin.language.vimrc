@@ -54,7 +54,6 @@ Plug 'prettier/vim-prettier', {
 let g:prettier#config#print_width = 120
 let g:prettier#autoformat = 0
 let g:prettier#config#tab_width = 4
-let g:prettier#config#trailing_comma = 'all'
 let g:prettier#config#single_quote = 'false'
 let g:prettier#config#bracket_spacing = 'true'
 nmap <leader>== <plug>(PrettierAsync)
