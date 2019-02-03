@@ -175,6 +175,12 @@ Usage:
 
 more detail check [https://github.com/DeronW/terminal/tree/master/neovim](https://github.com/DeronW/terminal/tree/master/neovim)
 
+### Useful CLI commands
+
+修改console中顯示的主機名稱:
+
+sudo scutil --set HostName [新名字]
+
 ### Task
 
 **Finished**
