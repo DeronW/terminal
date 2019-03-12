@@ -51,7 +51,7 @@ Plug 'prettier/vim-prettier', {
 \ 'do': 'npm install',
 \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
 \ }
-let g:prettier#config#print_width = 120
+let g:prettier#config#print_width = 100
 let g:prettier#autoformat = 0
 let g:prettier#config#tab_width = 4
 let g:prettier#config#single_quote = 'false'
