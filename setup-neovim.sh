@@ -1,6 +1,13 @@
+!/bin/bash
+
 set -e
+
 echo "Cleanup init.vim and plugged"
-rm -rf ~/.config/nvim/init.vim ~/.local/share/nvim/plugged
+if [ ! -d ~/.config/nvim ]; then
+    mkdir -p ~/.config/nvim
+else
+    rm -rf ~/.config/nvim/init.vim ~/.local/share/nvim/plugged
+fi
 
 # download Vundle first
 echo "download Vundle plugin first"
