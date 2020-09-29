@@ -59,5 +59,6 @@ function push --argument remote branch
     end
 end
 
-function start
+function merge --argument branch
+    git merge --ff $branch
 end
