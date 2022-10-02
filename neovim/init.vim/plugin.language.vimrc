@@ -16,8 +16,8 @@ let g:syntastic_statusline_flag=1
 " ------------------------------------
 
 " ------------------------------------
-" Golang , this is optional
-" Plug 'zchee/nvim-go', { 'do': 'make', 'for': 'go' }
+" Golang
+Plug 'fatih/vim-go'
 " ------------------------------------
 
 " ------------------------------------
@@ -28,11 +28,6 @@ Plug 'jparise/vim-graphql'
 " ------------------------------------
 "  JavaScript / TypeScript support
 Plug 'pangloss/vim-javascript'
-" ------------------------------------
-
-" ------------------------------------
-" Vue 框架 https://cn.vuejs.org/
-Plug 'posva/vim-vue'
 " ------------------------------------
 
 " ------------------------------------

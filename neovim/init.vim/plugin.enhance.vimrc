@@ -14,6 +14,8 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 map <C-n> :NERDTreeToggle<CR>
 " autocmd vimenter * NERDTree " 进入Vim后自动打开nerdtree
 let NERDTreeHighlightCursorline=1
+" 显示隐藏文件
+let NERDTreeShowHidden=1
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '\.orig$']
 
 " 如果当前窗口只剩 nerdtree, 自动关闭窗口
