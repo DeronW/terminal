@@ -5,7 +5,7 @@
 ### 使用方法
 
 ```shell
-curl -sSL https://raw.githubusercontent.com/DeronW/terminal/master/neovim/install.sh | bash -s stable
+curl -sSL https://gitee.com/richgreenwood/terminal/raw/master/neovim/install.sh | bash -s stable
 ```
 
 ### 插件管理
@@ -60,11 +60,3 @@ Vim 输入扩展
 ### 配置参考 spf13
 
 这是目前 github 上 star 最多的 Vim 配置方案 [http://vim.spf13.com/](http://vim.spf13.com/)
-
-![screenshot](https://raw.githubusercontent.com/DeronW/terminal/master/screenshots/neovim-logo-600x173.png)
-
-Usage:
-
-    curl https://raw.githubusercontent.com/DeronW/terminal/master/neovim/install.sh | sh
-
-more detail check [https://github.com/DeronW/terminal/tree/master/neovim](https://github.com/DeronW/terminal/tree/master/neovim)

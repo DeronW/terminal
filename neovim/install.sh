@@ -19,15 +19,15 @@ echo "create init.vim file"
 touch ~/.config/nvim/init.vim
 
 echo "\033[47;30m download config content \033[0m"
-curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/init.vim/head.vimrc >> ~/.config/nvim/init.vim
-curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/init.vim/property.vimrc >> ~/.config/nvim/init.vim
-curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/init.vim/hotkeys.vimrc >> ~/.config/nvim/init.vim
-curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/init.vim/plugin.start.vimrc >> ~/.config/nvim/init.vim
-curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/init.vim/plugin.enhance.vimrc >> ~/.config/nvim/init.vim
-curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/init.vim/plugin.language.vimrc >> ~/.config/nvim/init.vim
-curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/init.vim/plugin.end.vimrc >> ~/.config/nvim/init.vim
-curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/init.vim/functions.vimrc >> ~/.config/nvim/init.vim
-curl -s https://raw.githubusercontent.com/DeronW/terminal/master/neovim/init.vim/foot.vimrc >> ~/.config/nvim/init.vim
+curl -s https://gitee.com/richgreenwood/terminal/raw/master/neovim/init.vim/head.vimrc >> ~/.config/nvim/init.vim
+curl -s https://gitee.com/richgreenwood/terminal/raw/master/neovim/init.vim/property.vimrc >> ~/.config/nvim/init.vim
+curl -s https://gitee.com/richgreenwood/terminal/raw/master/neovim/init.vim/hotkeys.vimrc >> ~/.config/nvim/init.vim
+curl -s https://gitee.com/richgreenwood/terminal/raw/master/neovim/init.vim/plugin.start.vimrc >> ~/.config/nvim/init.vim
+curl -s https://gitee.com/richgreenwood/terminal/raw/master/neovim/init.vim/plugin.enhance.vimrc >> ~/.config/nvim/init.vim
+curl -s https://gitee.com/richgreenwood/terminal/raw/master/neovim/init.vim/plugin.language.vimrc >> ~/.config/nvim/init.vim
+curl -s https://gitee.com/richgreenwood/terminal/raw/master/neovim/init.vim/plugin.end.vimrc >> ~/.config/nvim/init.vim
+curl -s https://gitee.com/richgreenwood/terminal/raw/master/neovim/init.vim/functions.vimrc >> ~/.config/nvim/init.vim
+curl -s https://gitee.com/richgreenwood/terminal/raw/master/neovim/init.vim/foot.vimrc >> ~/.config/nvim/init.vim
 
 echo "starting install Vim plugins"
 nvim +PlugInstall +qall # install vim plugin
