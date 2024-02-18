@@ -1,0 +1,22 @@
+
+keybinds {
+    unbind "Ctrl q"
+
+    resize {
+        unbind "Ctrl n"
+        bind "Ctrl r" { SwitchToMode "Normal"; }
+    }
+
+    shared_except "resize" "locked" {
+        unbind "Ctrl n"
+        bind "Ctrl r" { SwitchToMode "Resize"; }
+    }
+
+    shared_except "session" "locked" {
+        unbind "Ctrl o"
+    }
+}
+
+default_shell "nu"
+
+auto_layout false

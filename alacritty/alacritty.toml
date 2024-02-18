@@ -1,0 +1,27 @@
+
+[shell]
+
+program = "/usr/local/bin/nu"
+args = [
+    "--env-config /Users/delong/.config/nushell/env.nu",
+    "--config /Users/delong/.config/nushell/config.nu",
+]
+
+[font]
+
+normal = { family = "SauceCodePro Nerd Font", style = "Regular" }
+size = 15
+
+[window]
+
+option_as_alt = "Both"
+
+[cursor.style]
+
+blinking = "On"
+
+[terminal]
+
+osc52 = "CopyPaste"
+
+[hints]
